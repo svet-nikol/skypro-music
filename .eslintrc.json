@@ -10,10 +10,10 @@
         "plugin:react/jsx-runtime"
     ],
     "parserOptions": {
+        "ecmaVersion": "latest",
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": ["react"],
