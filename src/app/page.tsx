@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { Montserrat } from "next/font/google";
 import PlaylistItem from "@/components/PlaylistItem/PlaylistItem";
 import { playlistArray } from "@/components/PlaylistItem/playlistArray";
-import TopBarPage from "@/components/TopBarPage/TopBarPage";
+import TopBarPage from "@/components/Header/Header";
 
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
