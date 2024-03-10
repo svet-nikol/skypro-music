@@ -1,14 +1,11 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import classNames from "classnames";
-import { Montserrat } from "next/font/google";
-import PlaylistItem from "@/components/PlaylistItem/PlaylistItem";
-import { playlistArray } from "@/components/PlaylistItem/playlistArray";
 import TopBarPage from "@/components/Header/Header";
 import NavMenu from "@/components/NavMenu/NavMenu";
 import FilterBlock from "@/components/FilterBlock/FilterBlock";
+import Playlist from "@/components/Playlist/Playlist";
+import SetTracksList from "@/components/SetTracksList/SetTracksList";
 
-const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
 export default function Home() {
   return (
@@ -17,93 +14,13 @@ export default function Home() {
         <TopBarPage />
         <main className={styles.main}>
           <NavMenu />
-          <div
-            className={classNames(styles.main__centerblock, styles.centerblock)}
-          >
-            <h2 className={styles.centerblock__h2}>Треки</h2>
+          <div className={styles.centerblock}>
+            <h2>Треки</h2>
             <FilterBlock />
-            <div className={styles.centerblock__content}>
-              <div className={styles.content__title}>
-                <div
-                  className={classNames(
-                    styles.playlistTitle__col,
-                    styles.col01
-                  )}
-                >
-                  Трек
-                </div>
-                <div
-                  className={classNames(
-                    styles.playlistTitle__col,
-                    styles.col02
-                  )}
-                >
-                  Исполнитель
-                </div>
-                <div
-                  className={classNames(
-                    styles.playlistTitle__col,
-                    styles.col03
-                  )}
-                >
-                  Альбом
-                </div>
-                <div
-                  className={classNames(
-                    styles.playlistTitle__col,
-                    styles.col04
-                  )}
-                >
-                  <svg className={styles.playlistTitle__svg}>
-                    <use xlinkHref="/img/icon/sprite.svg#icon-watch" />
-                  </svg>
-                </div>
-              </div>
-              <div className={styles.content__playlist}>
-                {playlistArray.map((item, index) => (
-                  <PlaylistItem key={index} item={item} />
-                ))}
-              </div>
-            </div>
+            <Playlist />
           </div>
-          <div className={classNames(styles.main__sidebar, styles.sidebar)}>
-            <div className={styles.sidebar__block}>
-              <div className={styles.sidebar__list}>
-                <div className={styles.sidebar__item}>
-                  <a className={styles.sidebar__link} href="#">
-                    <Image
-                      className={styles.sidebar__img}
-                      src="/img/playlist01.png"
-                      alt="day's playlist"
-                      width={250}
-                      height={150}
-                    />
-                  </a>
-                </div>
-                <div className={styles.sidebar__item}>
-                  <a className={styles.sidebar__link} href="#">
-                    <Image
-                      className={styles.sidebar__img}
-                      src="/img/playlist02.png"
-                      alt="day's playlist"
-                      width={250}
-                      height={150}
-                    />
-                  </a>
-                </div>
-                <div className={styles.sidebar__item}>
-                  <a className={styles.sidebar__link} href="#">
-                    <Image
-                      className={styles.sidebar__img}
-                      src="/img/playlist03.png"
-                      alt="day's playlist"
-                      width={250}
-                      height={150}
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className={styles.sidebar}>
+            <SetTracksList />
           </div>
         </main>
         <div className={styles.bar}>

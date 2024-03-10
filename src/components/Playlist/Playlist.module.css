@@ -1,0 +1,31 @@
+.playlistContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.tracksList {
+  display: block;
+  height: calc(100vh - 480px);
+  overflow-y: scroll;
+  padding-right: 24px;
+}
+
+.tracksList::-webkit-scrollbar {
+  float: left;
+  width: 4px;
+}
+
+.tracksList::-webkit-scrollbar-track {
+  background: #4b4949;
+  border-radius: 10px;
+}
+
+.tracksList::-webkit-scrollbar-thumb {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+}
