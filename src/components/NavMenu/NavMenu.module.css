@@ -1,0 +1,14 @@
+.nav {
+  width: 244px;
+  background-color: #181818;
+  padding: 0px 0 20px 36px;
+}
+
+.menu {
+  display: block;
+  visibility: visible;
+}
+
+.menuList {
+  padding: 18px 0 10px 0;
+}

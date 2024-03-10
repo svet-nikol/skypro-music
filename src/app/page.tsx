@@ -5,6 +5,8 @@ import { Montserrat } from "next/font/google";
 import PlaylistItem from "@/components/PlaylistItem/PlaylistItem";
 import { playlistArray } from "@/components/PlaylistItem/playlistArray";
 import TopBarPage from "@/components/Header/Header";
+import NavMenu from "@/components/NavMenu/NavMenu";
+import FilterBlock from "@/components/FilterBlock/FilterBlock";
 
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
@@ -12,58 +14,14 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-      <TopBarPage />
+        <TopBarPage />
         <main className={styles.main}>
-          <nav className={classNames(styles.main__nav, styles.nav)}>
-            <div className={classNames(styles.nav__burger, styles.nav__burger)}>
-              <span className={styles.burger__line} />
-              <span className={styles.burger__line} />
-              <span className={styles.burger__line} />
-            </div>
-            <div className={classNames(styles.nav__menu, styles.menu)}>
-              <ul className={styles.menu__list}>
-                <li className={styles.menu__item}>
-                  <a href="#" className={styles.menu__link}>
-                    Главное
-                  </a>
-                </li>
-                <li className={styles.menu__item}>
-                  <a href="#" className={styles.menu__link}>
-                    Мой плейлист
-                  </a>
-                </li>
-                <li className={styles.menu__item}>
-                  <a href="../signin.html" className={styles.menu__link}>
-                    Войти
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+          <NavMenu />
           <div
             className={classNames(styles.main__centerblock, styles.centerblock)}
           >
             <h2 className={styles.centerblock__h2}>Треки</h2>
-            <div
-              className={classNames(styles.centerblock__filter, styles.filter)}
-            >
-              <div className={styles.filter__title}>Искать по:</div>
-              <div
-                className={classNames(styles.filter__button, styles._btnText)}
-              >
-                исполнителю
-              </div>
-              <div
-                className={classNames(styles.filter__button, styles._btnText)}
-              >
-                году выпуска
-              </div>
-              <div
-                className={classNames(styles.filter__button, styles._btnText)}
-              >
-                жанру
-              </div>
-            </div>
+            <FilterBlock />
             <div className={styles.centerblock__content}>
               <div className={styles.content__title}>
                 <div

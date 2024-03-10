@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./TopBarPage.module.css";
+import styles from "./Header.module.css";
 import classNames from "classnames";
 import { Montserrat } from "next/font/google";
 
