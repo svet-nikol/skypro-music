@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { Montserrat } from "next/font/google";
 import PlaylistItem from "@/components/PlaylistItem/PlaylistItem";
 import { playlistArray } from "@/components/PlaylistItem/playlistArray";
+import TopBarPage from "@/components/TopBarPage/TopBarPage";
 
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
@@ -11,17 +12,9 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
+      <TopBarPage />
         <main className={styles.main}>
           <nav className={classNames(styles.main__nav, styles.nav)}>
-            <div className={styles.nav__logo}>
-              <Image
-                className={styles.logo__image}
-                src="/img/logo.png"
-                alt="logo"
-                width={113.33}
-                height={17}
-              />
-            </div>
             <div className={classNames(styles.nav__burger, styles.nav__burger)}>
               <span className={styles.burger__line} />
               <span className={styles.burger__line} />
@@ -50,22 +43,6 @@ export default function Home() {
           <div
             className={classNames(styles.main__centerblock, styles.centerblock)}
           >
-            <div
-              className={classNames(styles.centerblock__search, styles.search)}
-            >
-              <svg className={styles.search__svg}>
-                <use xlinkHref="/img/icon/sprite.svg#icon-search" />
-              </svg>
-              <input
-                className={classNames(
-                  montserrat.className,
-                  styles.search__text
-                )}
-                type="search"
-                placeholder="Поиск"
-                name="search"
-              />
-            </div>
             <h2 className={styles.centerblock__h2}>Треки</h2>
             <div
               className={classNames(styles.centerblock__filter, styles.filter)}
@@ -132,14 +109,6 @@ export default function Home() {
             </div>
           </div>
           <div className={classNames(styles.main__sidebar, styles.sidebar)}>
-            <div className={styles.sidebar__personal}>
-              <p className={styles.sidebar__personalName}>Sergey.Ivanov</p>
-              <div className={styles.sidebar__icon}>
-                <svg>
-                  <use xlinkHref="/img/icon/sprite.svg#logout" />
-                </svg>
-              </div>
-            </div>
             <div className={styles.sidebar__block}>
               <div className={styles.sidebar__list}>
                 <div className={styles.sidebar__item}>
@@ -285,10 +254,6 @@ export default function Home() {
                       )}
                       type="range"
                       name="range"
-                      // style={{
-                      //   background: 'linear-gradient(to right, green 50%, red 50%)'
-                      // }}
-                      // onInput={(event) => event.target.style.background = `linear-gradient(to right, green ${event.target.value}%, red ${event.target.value}%)`}
                     />
                   </div>
                 </div>
