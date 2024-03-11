@@ -5,6 +5,8 @@ import FilterBlock from "@/components/FilterBlock/FilterBlock";
 import Playlist from "@/components/Playlist/Playlist";
 import SetTracksList from "@/components/SetTracksList/SetTracksList";
 import Player from "@/components/Player/Player";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import Centerblock from "@/components/Centerblock/Centerblock";
 
 export default function Home() {
   return (
@@ -13,19 +15,17 @@ export default function Home() {
         <TopBarPage />
         <main className={styles.main}>
           <NavMenu />
-          <div className={styles.centerblock}>
-            <h2>Треки</h2>
+          <Centerblock>
+            <h2 className={styles.centerblockTitle}>Треки</h2>
             <FilterBlock />
             <Playlist />
-          </div>
-          <div className={styles.sidebar}>
+          </Centerblock>
+          <Sidebar>
             <SetTracksList />
-          </div>
+          </Sidebar>
         </main>
-        <div className={styles.bar}>
-          <Player />
-        </div>
-        <footer className={styles.footer} />
+        <Player />
+        <footer />
       </div>
     </div>
   );

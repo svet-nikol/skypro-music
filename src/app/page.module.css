@@ -27,15 +27,7 @@
   justify-content: space-between;
 }
 
-.centerblock {
-  width: auto;
-  -webkit-box-flex: 3;
-  -ms-flex-positive: 3;
-  flex-grow: 3;
-  padding: 20px 40px 20px 111px;
-}
-
-.centerblock h2 {
+.centerblockTitle {
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -44,15 +36,4 @@
   margin-bottom: 45px;
 }
 
-.sidebar {
-  max-width: 418px;
-  padding: 20px 90px 20px 78px;
-}
 
-.bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(28, 28, 28, 0.5);
-}
