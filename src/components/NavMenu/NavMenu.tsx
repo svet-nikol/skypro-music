@@ -8,9 +8,9 @@ export default function NavMenu() {
       <NavBurger />
       <div className={styles.menu}>
         <ul className={styles.menuList}>
-          <NavLink>Главное</NavLink>
-          <NavLink>Мой плейлист</NavLink>
-          <NavLink>Войти</NavLink>
+          <NavLink href="/">Главное</NavLink>
+          <NavLink href="/">Мой плейлист</NavLink>
+          <NavLink href="/signin">Войти</NavLink>
         </ul>
       </div>
     </nav>

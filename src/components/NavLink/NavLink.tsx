@@ -1,11 +1,12 @@
+import Link from "next/link";
 import styles from "./NavLink.module.css";
 
-export default function NavLink({ children }: {children: string}) {
+export default function NavLink({ children, href }: {children: string; href: string}) {
   return (
     <li className={styles.item}>
-      <a href="#" className={styles.link}>
+      <Link href={href} className={styles.link}>
         {children}
-      </a>
+      </Link>
     </li>
   );
 }
