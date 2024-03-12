@@ -1,0 +1,8 @@
+.centerblock {
+    width: auto;
+    max-height: calc(100vh - 195px);
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+    padding: 20px 40px 20px 111px;
+  }
