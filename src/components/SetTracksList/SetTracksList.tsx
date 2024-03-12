@@ -10,18 +10,21 @@ export default function SetTracksList() {
           alt={"day's playlist"}
           width={250}
           height={150}
+          href="/playlistday"
         />
         <SetTracksItem
           src={"/img/playlist02.png"}
           alt={"100 dance tracks"}
           width={250}
           height={150}
+          href="/playlist100dance"
         />
         <SetTracksItem
           src={"/img/playlist03.png"}
           alt={"indie-charge"}
           width={250}
           height={150}
+          href="/playlistindiecharge"
         />
       </div>
     </div>

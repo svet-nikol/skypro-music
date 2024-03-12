@@ -6,15 +6,17 @@ export default function SetTracksItem({
   alt,
   width,
   height,
+  href,
 }: {
   src: string;
   alt: string;
   width: number;
   height: number;
+  href: string;
 }) {
   return (
     <div className={styles.itemWrap}>
-      <a className={styles.link} href="#">
+      <a className={styles.link} href={href}>
         <Image
           className={styles.img}
           src={src}

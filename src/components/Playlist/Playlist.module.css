@@ -10,7 +10,7 @@
 
 .tracksList {
   display: block;
-  height: calc(100vh - 480px);
+  max-height: calc(100vh - 480px);
   overflow-y: scroll;
   padding-right: 24px;
 }
