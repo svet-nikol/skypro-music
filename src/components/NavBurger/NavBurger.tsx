@@ -1,11 +1,18 @@
 import styles from "./NavBurger.module.css";
+import React from 'react';
 
-export default function NavBurger() {
+type NavBurgerProps = {
+  onClick: React.MouseEventHandler<HTMLDivElement>;
+};
+
+const NavBurger: React.FC<NavBurgerProps> = ({ onClick }) => {
   return (
-    <div className={styles.navBurgerDiv}>
+    <div onClick={onClick} className={styles.navBurgerDiv}>
       <span className={styles.burgerLine} />
       <span className={styles.burgerLine} />
       <span className={styles.burgerLine} />
     </div>
   );
 }
+
+export default NavBurger;
