@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from "react";
 import NavBurger from "../NavBurger/NavBurger";
 import NavLink from "../NavLink/NavLink";
