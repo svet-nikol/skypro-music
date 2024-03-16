@@ -1,9 +1,17 @@
 import styles from "./Playlist.module.css";
-import { playlistArray } from "../PlaylistItem/playlistArray";
 import PlaylistTitle from "../PlaylistTitle/PlaylistTitle";
 import PlaylistItem from "../PlaylistItem/PlaylistItem";
+import { getTracks } from "@/api/tracks";
 
-export default function Playlist() {
+async function Playlist() {
+  let playlistArray: trackType[];
+  try {
+    playlistArray = await getTracks();
+  } catch (error) {
+    console.error("Произошла ошибка при получении списка треков:", error);
+    playlistArray = [];
+  }
+
   return (
     <div className={styles.playlistContent}>
       <PlaylistTitle />
@@ -15,3 +23,5 @@ export default function Playlist() {
     </div>
   );
 }
+
+export default Playlist;

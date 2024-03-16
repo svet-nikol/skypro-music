@@ -1,7 +1,7 @@
 import { PlaylistItemProps } from "./PlaylistItemTypes";
 import styles from "./PlaylistItem.module.css"
 
-export default function PlaylistItem({ item }: {item: PlaylistItemProps }) {
+export default function PlaylistItem({ item }: {item: trackType }) {
   return (
     <div className={styles.item}>
       <div className={styles.track}>
@@ -13,7 +13,7 @@ export default function PlaylistItem({ item }: {item: PlaylistItemProps }) {
           </div>
           <div>
             <a className={styles.titleLink} href="http://">
-              {item.title} <span className={styles.titleSpan}>{item.titleSpan}</span>
+              {item.name} 
             </a>
           </div>
         </div>
@@ -31,9 +31,11 @@ export default function PlaylistItem({ item }: {item: PlaylistItemProps }) {
           <svg className={styles.timeSvg}>
             <use xlinkHref="/img/icon/sprite.svg#icon-like" />
           </svg>
-          <span className={styles.timeText}>{item.time}</span>
+          <span className={styles.timeText}>{item.duration_in_seconds}</span>
         </div>
       </div>
     </div>
   );
 }
+
+//<span className={styles.titleSpan}>{item.titleSpan}</span>
